@@ -3,6 +3,7 @@ library(ggplot2)
 library(DT)
 
 ui <- fluidPage(
+  shiny::tags$h1('title'),
   plotOutput("plot", brush = "plot_brush"),
   DTOutput("table")
 )
