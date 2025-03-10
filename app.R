@@ -1,5 +1,5 @@
 
-
+library(magrittr)
 load('./data/reports.rda')
 
 
