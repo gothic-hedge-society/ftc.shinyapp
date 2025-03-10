@@ -4,7 +4,6 @@ load('./data/reports.rda')
 
 
 ui <- shiny::fluidPage(
-  shiny::fluidRow(),
   shiny::selectInput(
     inputId = 'selected_trader',
     label   = 'Select a Trader',
