@@ -32,9 +32,9 @@ server <- function(input, output) {
         )
       ) %>%
       DT::formatDate(1) %>%
-      DT::formatCurrency(c(2,3)) %>%
-      DT::formatPercentage(c(4,5,6,7,8,10), digits = 4) %>%
-      DT::formatSignif(c(9, 11), digits = 4) 
+      DT::formatCurrency(c(3,4)) %>%
+      DT::formatPercentage(c(5,6,7,8,9,11), digits = 4) %>%
+      DT::formatSignif(c(10, 12), digits = 4) 
   })
 }
 
