@@ -16,10 +16,11 @@ ui <- shiny::fluidPage(
 server <- function(input, output) {
   output$main_dt <- DT::renderDataTable({
     reports %>% 
-      dplyr::filter(trader_name == 'Atom') %>% {
+      dplyr::filter(trader_name == input$selected_trader) %>% {
         .$statement[[1]]
       } %>%
       dplyr::arrange(dplyr::desc(date)) %>%
+      dplyr::select(date, rank, dplyr::everything()) %>%
       DT::datatable(
         rownames = FALSE,
         extensions = c('Scroller', 'FixedColumns'),
